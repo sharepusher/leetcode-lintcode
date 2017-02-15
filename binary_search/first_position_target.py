@@ -1,3 +1,6 @@
+## Reference
+http://www.lintcode.com/en/problem/first-position-of-target/#
+
 ## Description
 # For a given sorted array (ascending order) and a target number, find the FIRST index of this number in O(logN) time complexity.
 # If the target number does not exist in the array, return -1.
