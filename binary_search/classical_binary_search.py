@@ -1,3 +1,6 @@
+## Reference
+http://www.lintcode.com/en/problem/first-position-of-target/#
+
 ## Description *
 # Find "ANY" postion of a target number in a "SORTED" array. Return -1 if target does not exist.
 # Given [1, 2, 2, 4, 5, 5]. For target 2, return 1 or 2.
