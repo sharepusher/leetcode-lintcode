@@ -51,7 +51,7 @@ if __name__ == "__main__":
         print("find the target!")
     else:
         print("failed to find the target!")
-        sys.exit()      
+        sys.exit(0)      
     if ans.findPosition(A, target3) == -1:
         print("passed the test")
      
