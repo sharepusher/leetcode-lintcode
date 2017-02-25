@@ -1,7 +1,7 @@
 ## Reference
 # http://www.lintcode.com/en/problem/count-of-smaller-number/#
 
-## Tags
+## Tags - medium
 # Binary Search; Segment Tree
 
 ## Challenge
