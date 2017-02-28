@@ -1,0 +1,12 @@
+##  Binary Search
+
+When? 
+Improve O(N) -> O(logN)
+sorted array; Rotated Sorted array
+
+How?
+Find the first or the last position that meet some requirement
+
+Key: 
+Keep the part that MUST have the target, drop the other part!
+
