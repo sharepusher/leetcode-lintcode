@@ -21,6 +21,7 @@
 # so actually, we can figure out the solution according to previous solution,
 # and then reverse the result. Any better solution? 
 
+# Time - O(N); Space - O(N) as using extra queue or extra tempstack for reverse
 
 
 ## Solution
