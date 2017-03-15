@@ -26,7 +26,30 @@ class TreeNode:
         self.left, self.right = None, None
 
 class Solution:
-    def cloneTree(self, root):
+    # DFS - nonrecursion: stack
+    def cloneTree2(self, root):
+        if not root:
+            return None
+        # as we need a newroot, and keep the new root updated together with original one
+        # so we need put both of them into the stack
+        # Update the deep copy node when stack pop up, as we need do other node copy in the while loop
+        newroot = TreeNode(None)
+        stack = [(root, newroot)]
+        while stack:
+            node, newnode = stack.pop()
+            newnode.val = node.val
+            if node.left:
+                newnode.left = TreeNode(None)
+                stack.append((node.left, newnode.left))
+            if node.right:
+                newnode.right = TreeNode(None)
+                stack.append((node.right, newnode.right))
+        return newroot
+
+
+    
+    # DFS - recursion:divide and conquer
+    def cloneTree1(self, root):
         if not root:
             return None
         # clone root value
