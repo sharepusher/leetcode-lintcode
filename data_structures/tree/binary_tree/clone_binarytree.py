@@ -2,7 +2,7 @@
 # http://www.lintcode.com/en/problem/clone-binary-tree/
 
 ## Tags - Easy
-# Binary Tree;
+# Binary Tree; DFS; Divde and conquer
 
 
 ## Description
