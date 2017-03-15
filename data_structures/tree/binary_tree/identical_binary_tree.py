@@ -62,7 +62,22 @@ class Solution:
         # now a and b are identical, we need check left and right
         return self.isIdentical3(a.left, b.left) and self.isIdentical3(a.right, b.right)
 
-
-
-
-
+    # non-recursion
+    def isIdentical4(self, a, b):
+        stack = [(a, b)]
+        while stack:
+            a, b = stack.pop()
+            # not a and not b should continue, as which means it's the leaf node,
+            # however, there's maybe still node in stack
+            # so we can NOT return True at that time.
+            if not a and not b:
+                continue
+            if (not a and b) or (a and not b) or (a and b and a.val != b.val):
+                return False
+           
+            # additionally, we need make sure that a and b are true, then we can put left and right into the stack
+            
+            stack.append(a.right, b.right)
+            stack.append(a.left, b.left)
+        # finished the travese, and non invalid found, so we reutrn Ture 
+        return True
