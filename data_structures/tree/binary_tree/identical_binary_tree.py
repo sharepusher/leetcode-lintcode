@@ -3,7 +3,7 @@
 
 
 ## Tags - Easy
-# Binary Tree
+# Binary Tree; DFS; Divide and conquer; Recursion
 
 
 ## Description
