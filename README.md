@@ -1,2 +1,2 @@
 # leetcode-lintcode
-Share my leetcode and lintcode problem python solution
+My solutions to leetcode/lintcode problems in python.
