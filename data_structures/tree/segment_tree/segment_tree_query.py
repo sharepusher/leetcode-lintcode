@@ -58,4 +58,6 @@ class Solution:
         # left max
         left = self.helper(root.left, start, end)
         right = self.helper(root.right, start, end)
+        return max(left, right)
+
 
