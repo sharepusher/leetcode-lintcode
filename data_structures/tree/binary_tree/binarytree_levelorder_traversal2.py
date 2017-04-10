@@ -1,5 +1,6 @@
 ## Reference
 # http://www.lintcode.com/en/problem/binary-tree-level-order-traversal-ii/
+# https://leetcode.com/problems/binary-tree-level-order-traversal-ii/#/description
 
 
 ## Tags - Medium
@@ -36,20 +37,20 @@ class Solution:
     def dfs(self, root, depth, max_depth):
         if not root or depth > max_depth:
             return []
+        # base case
         if depth == max_depth:
             return [root.val]
         left = self.dfs(root.left, depth+1, max_depth)
         right = self.dfs(root.right, depth+1, max_depth)
         return left+right
 
+    # while + DFS
     def levelOrderBottom2(self, root):
         if not root:
             return []
         result = []
-        max_depth = 0
+        depth, max_depth = 0
         while True:
-            # current depth
-            depth = 0
             level = self.dfs(root, depth, max_depth)
             if not level:
                 break
@@ -58,7 +59,7 @@ class Solution:
         return reversed(result)
 
 
-    # One queue BFS
+    # One queue BFS + reverse
     def levelOrderBottom1(self, root):
         if not root:
             return []
@@ -76,10 +77,7 @@ class Solution:
                 if current.right:
                     q.append(current.right)
             result.append(level)
-        newresult = []
-        # reverse the result to meet the requirement
-        while result:
-            newresult.append(result.pop())
-        return newresult
+        result.reverse()
+        return result
 
 
