@@ -12,10 +12,12 @@
 ## Analysis
 # input - @param: the root of a binary tree
 # output - @return root of the new tree
+
+# 1) deep copy should copy the node value and node relationship
+# 2) copy root first, and then left, right => pre-order traversal;
 # return the new binary tree with same structure and same value.
-# traverse and create new node
-# divide conquer? seems traverse is better than divide and conquer, as only root can be returned.
-# actuall divide and conquer is better 
+# create new node and traverse
+# divide and conquer is better 
 
 
 ## Solution
@@ -61,9 +63,5 @@ class Solution:
         # merge left and right to root
         newroot.left, newroot.right = left, right
         return newroot
-
-
-## Solution
-
 
 
