@@ -2,7 +2,6 @@
 # https://leetcode.com/problems/symmetric-tree/#/description
 
 
-
 ## Tags - Easy
 # Binary Tree; DFS; BFS
 
@@ -18,7 +17,6 @@
 # both Recursively and Iteratively.
 
 
-
 ## Solution
 # definition of binary Tree
 class TreeNode(Object):
@@ -27,6 +25,39 @@ class TreeNode(Object):
         self.left, self.right = left, right
    
 class Solution:
+    # BFS: while+queue(deque)
+    def isSymmetric4(self, root):
+        if not root:
+  	    return True
+        if not root.left and not root.right:
+            return True
+        if not root.left or not root.right:
+            return False
+        # now compare left and right subtree
+    	from collections import deque
+ 	q1 = deque([root.left])
+        q2 = deque([root.right])
+        while q1 and q2:
+            curr1, curr2 = q1.popleft(), q2.popleft()
+            if not curr1 and not curr2:
+                continue
+            if not self.comNode(curr1, curr2):
+                return False
+            # update q1 and q2 by collecting q1.left,q1.right and q2.right,q2.left
+            q1.append(curr1.left)
+            q1.append(curr1.right)
+            q2.append(curr2.right)
+            q2.append(curr2.left)
+        return True
+            
+    def compNode(self, node1, node2):
+        if not node1 and not node2:
+            return True
+        if node1 and node2 and node1.val == node2.val:
+            return True
+        return False 
+    
+
     # DFS - recursion: divide and conquer
     def isSymmetric3(self, root):
         if not root:
