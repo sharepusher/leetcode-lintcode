@@ -1,0 +1,12 @@
+# Divide and conquer
+# T(N) -> 2T(N/2) + O(1) -> O(2N) -> O(N) time complexity.
+
+ 
+DFS - use recursion or non-recursion
+  recursion: define what the recursion function does.
+  1) traverse(usually return void, the result is in parameter) - top down;
+  2) divide and conquer(return part of result, and merge the result properly;)
+     we have to get the left and right result, then merge the root result - bottom up.
+     clasic problem: merge sort, quick sort solution.
+  They are both recursion algorithm.
+   
