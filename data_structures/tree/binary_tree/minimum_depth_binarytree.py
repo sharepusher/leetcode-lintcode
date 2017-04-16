@@ -1,5 +1,6 @@
 ## Reference
 # http://www.lintcode.com/en/problem/minimum-depth-of-binary-tree/#
+# 111 https://leetcode.com/problems/minimum-depth-of-binary-tree/#/description
 
 
 ## Tags - Easy
@@ -34,7 +35,28 @@ class TreeNode:
         self.left, self.right = None, None
 
 class Solution:
-    def minDepth(self, root):
+    # BFS - when a node has no child, then it's the leaf node.
+    def minDepth2(self, root):
+  	if not root:
+	    return 0
+        # KEY: at least 1 at this time.
+	min_height = 1
+	from collections import deque
+	q = deque([root])
+	while q:
+	    qlen = len(q)
+	    for i in xrange(qlen):
+		curr = q.popleft()
+		if not curr.left and not curr.right:
+		    return min_height
+		for node in (curr.left, curr.right):
+		    if node:
+			q.append(node)
+	    min_height += 1
+	return min_height
+
+    # divide and conquer
+    def minDepth1(self, root):
         if not root:
             return 0
         left = self.minDepth(root.left)
