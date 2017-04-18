@@ -1,16 +1,14 @@
 ## Reference
 # http://www.lintcode.com/en/problem/balanced-binary-tree/
-
+# 110 https://leetcode.com/problems/balanced-binary-tree/#/description
 
 ## Tags - Easy
-# Divide and conquer; Recursion
-
+# Balanced BinaryTree; Divide and conquer; Recursion
 
 ## Description
 # Given a binary tree, determin if it is height-balanced.
 # For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees
 # of every node never differ by more than 1.
-
 
 ## Analysis
 # input - the root of binary tree
@@ -20,7 +18,6 @@
 #    in other words, it's easier to be proved by recursion. 
 # 2) the balanced condition is that abs(left height -right height) <= 1
 #    in other words, we need to know the max depth of subtrees, and compare the left and right max depth
-
 
 ## Solution
 # definition of bianry tree
@@ -45,9 +42,6 @@ class Solution:
         maxdepth = max(left, right) + 1
         return balanced, maxdepth
 
-                
-
-
     def isBalanced1(self, root):
         # corner case
         if not root:
@@ -65,6 +59,3 @@ class Solution:
             return -1
         return max(left, right) + 1 
         
-    
-                      
-
