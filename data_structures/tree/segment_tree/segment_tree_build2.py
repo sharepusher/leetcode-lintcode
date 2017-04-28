@@ -35,13 +35,10 @@
 # 2) the other is how we know the max value when build the segment Tree.
 # About the second question, as the original list is unsorted,
 # and we cannot sort it, as we need to keep it in the original order  
-
-# as the recursion tree will go deep to the end first, in this case, we will know left and right node, 
-# we can get the left and right, then compare them, and update the root, then
+# The recursion tree will go deep to the end first, in this case, we will know left max and right max, 
+# by which, after comparation, we can get the root max 
 # How to build the segment Tree:
 # recursion - pre-order traversal; divide and conquer
-#
-
 
 ## Solution
 # Definition of Segment Tree Node
@@ -78,5 +75,4 @@ class Solution:
         N = len(A)
         start, end = 0, N-1
         return self.buildMax(start, end, A)
-
 
