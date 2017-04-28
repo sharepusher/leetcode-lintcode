@@ -45,7 +45,7 @@
 
 class SegmentTreeNode:
     def __init__(self, start, end, max)
-        start, end, max = None, None, None
+        self.start, self.end, self.max = None, None, None
         left, right = None, None
 
 class Solution:
