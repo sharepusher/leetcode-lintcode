@@ -55,11 +55,12 @@ class Solution:
     def buildMax(self, start, end, A):
         if start > end:
             return None
-        max_node = A[start]
-        root = SegmentTreeNode(start, end, max_node)
+        root = SegmentTreeNode(start, end, A[start])
         if start == end:
             return root
         ## start < end
+        ## NOTE: start and end are indexes! BUT NOT range
+	## that's why it's (start+end)//2
         root.left = self.buildMax(start, (start+end)//2, A)
         root.right = self.buildMax((start+end)//2+1, end, A)
         # conquer
