@@ -1,8 +1,8 @@
 ## Reference
 # http://www.lintcode.com/en/problem/fibonacci/
 
-## Tags - Easy
-# Mathematics; Recursion; DP
+## Tags - Naive
+# Booking; Mathematics; Recursion; DP
 
 ## Description
 # Find the Nth number in Fibonacci sequence.
