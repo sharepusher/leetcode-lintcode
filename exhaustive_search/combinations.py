@@ -23,6 +23,7 @@
 # 3) almost the same as the permutation
 
 ## Solutions
+# Time: O(N!); Space: O(K) space
 class Solution(object):
     def combine(self, n, k):
 	if n <= 0 or k <= 0 or n < k:
