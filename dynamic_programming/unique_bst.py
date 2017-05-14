@@ -21,6 +21,7 @@
 # 2) the number of unique BSTs of num i, equals to left bst's multiple right bst's
 
 ## Solutions
+# Time-O(N^2) => arithmetic progression((N^2)/2); space O(N)
 class Solution(object):
     def numTrees(self, n):
 	if n < 0:
