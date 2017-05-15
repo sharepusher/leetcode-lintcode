@@ -14,10 +14,8 @@
 # Find the number of elements in the array's inverval[start, end] by the given root of value
 # SegmentTree.
 
-
 ## Analysis
 # what's the meaning of count? how to get it?
-
 
 ## Solution
 # definition of segment Tree node
@@ -62,8 +60,3 @@ class SegmentTree:
         right = self.queryCount(root.right, start, end)
         return left + right
 
-
-            
-         
-           
-    
