@@ -16,6 +16,7 @@
 
 ## Analysis
 # For interval/range/segment problems, we takes consideration of segment tree first.
+# Segment Tree cost O(N) time to build, O(N) space to store, but O(logN) query and update.
 
 ## Solutions
 # pythonic way
