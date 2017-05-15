@@ -4,10 +4,8 @@
 ## Tags - Medium
 # Binary Search, Segment Tree
 
-
 ## Challenge
 # O(logN) time for each query
-
 
 ## Description
 # Given an integer array (index from 0 to n-1, where n is the size of this array)
@@ -17,17 +15,13 @@
 # return the result list.
 # For array [1, 2, 7, 8, 5], and queries[(0,4), (1, 2), (2, 4)], return [23, 9, 20]
 
-
 ## Analysis
-# input - the array and queries
-# output - list of sums of queries
+# input - the array and queries; output - list of sums of queries
 # for interval related problem, we can use segment tree.
-# the build process cost O(N) time and O(N) space, for we have to setup 2N nodes for the entire tree
+# The build process cost O(N) time and O(2^N) space, for we have to setup 2^N-1 nodes for the entire tree
 # but the height of the tree is log(N)
 # therefore, the query and modify cost log(N)
 # the other method is the presum by DP, which also cost O(N) space and time to setup and modify, but only O(1) to query.
- 
-
 
 ## Solution
 # definition of interval objects
@@ -81,7 +75,6 @@ class SegmentTree:
         return left+right
 
 class Solution:
-    
     # segment tree
     def intervalSum1(self, A, queries):
         # corner case
