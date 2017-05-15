@@ -18,7 +18,7 @@
 ## Analysis
 # input - the array and queries; output - list of sums of queries
 # for interval related problem, we can use segment tree.
-# The build process cost O(N) time and O(2^N) space, for we have to setup 2^N-1 nodes for the entire tree
+# The build process cost O(N) time and O(N) space, for we have to setup 2N-1 nodes for the entire tree(N leafs + N-1 inside nodes)
 # but the height of the tree is log(N)
 # therefore, the query and modify cost log(N)
 # the other method is the presum by DP, which also cost O(N) space and time to setup and modify, but only O(1) to query.
