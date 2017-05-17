@@ -20,6 +20,9 @@
 ## Analysis
 # 1) corner case: target > 0; 
 # 2) sort can make it easier to combine
+# 3) combinations like subset
+#    as sequence can only go forward, but not backward,
+#    in other words, 134 is the same as 431 to calculate the sum.
 
 ## Solution
 # O(N!) time ; O(N) space
@@ -50,16 +53,3 @@ if __name__ == "__main__":
 	print("Passed: Combinationsum implementation.")
     else:
 	print("Failed: Combinationsum implementation.")
-
-
-
-
-
-
-
-
-
-
-
-
-
