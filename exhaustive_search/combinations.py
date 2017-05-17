@@ -20,7 +20,7 @@
 ## Analysis
 # 1) corner case: n >= 1; k >= 1; n >= k; 
 # 2) as the number is 1...to...n, therefore, no duplicates should be taking consideration.
-# 3) almost the same as the permutation
+# 3) the same as the subset, as it has sequence, you can not combine backward but only forward. 
 
 ## Solutions
 # Time: O(N!); Space: O(K) space
@@ -50,7 +50,3 @@ if __name__ == "__main__":
 	print("Passed: Combination implementation.")
     else:
 	print("Failed: Combination implementation.")
-
-
-
-
