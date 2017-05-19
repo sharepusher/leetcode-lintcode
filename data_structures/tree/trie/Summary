@@ -11,3 +11,19 @@
 # Each branch represents a possible character of keys.
 # We need to mark the last node of every key as leaf node.
 # A trie node field value will be used to distinguish the node as leaf node.
+
+## Hash and Trie have same time complexity
+# hash has to traverse string letter by letter so that it can convert it to an integer hashcode.
+# Therefore, the O(1) actually means O(W).
+# While, Trie also just need O(W) time on word traverse.
+
+## Hash vs Trie Space complexity
+# hash map > Trie
+# Tire can save the duplicate letters.
+# Therefore, which is better on space.
+
+## When to Use Trie
+# 1) we need traverse string letter by letter
+# 2) we wanna save space.
+# 3) search prefix very convenient.(that's why we also call it prefix tree)
+
