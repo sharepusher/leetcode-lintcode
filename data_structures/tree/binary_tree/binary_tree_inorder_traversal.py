@@ -1,17 +1,14 @@
 ## Reference
 # http://www.lintcode.com/en/problem/binary-tree-inorder-traversal/
 
-
 ## Tags - Easy; Medium(non-recursion)
 # DFS; BinaryTree; Recursion; BinaryTree Traversal
-
 
 ## Challenge
 # Do it without recursion
 
 ## Description
 # Given a binary tree, return the inorder traversal of its nodes' value.
-
 
 ## Analysis
 # input - root node of the binary tree
@@ -29,7 +26,6 @@
 # if have, enqueue the right
 
 #Time - O(N): each node will be visited in linear times; no extra space if it's recursion
-#  
 
 ## Solution
 # Defination of Binary Tree Node
@@ -83,12 +79,6 @@ class Solution:
         result.append(root.val)
         self.dfshelper(root.right, result)
 
-        
-            
-        
-
-
-
     ## recursion
     # divide and conquer
     def inorderTraversal1(self, root):
@@ -114,4 +104,3 @@ class Solution:
         self.dfshelper(root.left, result)
         result.append(root.val)
         self.defshelper(root.right, result)
-    
