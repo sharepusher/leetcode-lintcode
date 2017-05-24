@@ -1,18 +1,14 @@
 ## Reference
 # http://www.lintcode.com/en/problem/binary-tree-preorder-traversal/
 
-
 ## Tags - Easy
 # BinaryTree; BinaryTree Traversal; Recursion; NonRecursion
-
 
 ## Challenge
 # Do it WITHOUT recursion
 
-
 ## Description
 # Given a binary tree, return the preorder traversal of its node's values.
-
 
 ## Analysis
 # input - the root of binary tree
@@ -27,8 +23,6 @@
 # 1) the defination of the recursion - input; output; what does the recursion do?
 # 2) the construction of the recursion
 # 3) the exit of the recursion(when the recursion stop/quit)
-# 
-
 
 ## Solution 
 # Defination of Binary Tree Node.
