@@ -76,14 +76,3 @@ if __name__ == "__main__":
         print("Passed: Palindrome Partition.")
     else:
 	print("Failed: Palindrome Partition.")
-	
-		
-
-
-
-
-
-
-
-
-
