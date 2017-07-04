@@ -1,10 +1,9 @@
 ## Reference
 # http://www.lintcode.com/en/problem/search-in-rotated-sorted-array-ii/
+# 81 https://leetcode.com/problems/search-in-rotated-sorted-array-ii/#/description
 
-
-## Tags - Medium
-# Binary Search
-
+## Tags - Medium; Blue
+# Binary Search; Sorted Array
 
 ## Description
 # Follow up for Search in Rotated Sorted Array.
@@ -12,7 +11,6 @@
 # Would this affect the run-time complexity? How and Why?
 
 # Write a function to determin if a given targets is in the array.
-
 
 ## Analysis
 # Though it's a follow up questions, it just ask whether the target exist or not !
