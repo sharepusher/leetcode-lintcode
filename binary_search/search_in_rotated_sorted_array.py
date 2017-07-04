@@ -1,19 +1,16 @@
 ## Reference
 # http://www.lintcode.com/en/problem/search-in-rotated-sorted-array/
+# 33 https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-## Tags - Medium
-# Binary Search
-
+## Tags - Medium; Yellow
+# Binary Search; Sorted Array; Linkedin; Uber; Facebook
 
 ## Description
 # Suppose a sorted array is rotated at some pivot unknown to you beforehand
 # (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2)
 # You are given a target value to search.
 # If found in the array return its index, otherwise return -1.
-#
 # Notice: assume no duplicate exists.
-#
-
 
 ## Challenge
 # O(logN) time
@@ -29,7 +26,7 @@
 # Comparing the A[middle] and target is not enough to locate which situation
 # the middle is on.
 # we can only use the binary search on a sorted array range, but not the entire
-# rotated array.
+# rotated array: Convert the discussion to sorted sequence.
 # How:  
 #    1) if A[middle] == target: then the middle is the index looking for;
 #    2) if A[middle] < target: i.e target is in the right part
@@ -38,8 +35,6 @@
 #            
 #           as A[middle] <= target <= A[end]
 #        b. 
-#
-# 
 
 ## Solution
 class Solution:
@@ -84,6 +79,32 @@ class Solution:
         if A[end] == target:
             return end
         return -1
+
+    def search3(self, A, target):
+        if not A:
+            return -1
+        N = len(A)
+        start, end = 0, N-1
+        while start + 1 < end:
+            middle = (start+end) >> 1
+            if A[middle] == target:
+                return middle
+            # use A[start] or A[end] to define which part the middle located
+            if A[middle] <= A[end]:
+                if A[middle] < target <= A[end]:
+                    start = middle
+                else:
+                    end = middle
+            else:
+                if A[start] <= target < A[middle]:
+                    end = middle
+                else:
+                    start = middle
+        if A[start] == target:
+            return start
+        if A[end] == target:
+            return end
+        return -1
           
 if __name__ == "__main__":
     a = [4, 5, 1, 2, 3]
@@ -91,8 +112,8 @@ if __name__ == "__main__":
     t2, ret2 = 0, -1
     ans = Solution()
     if ret1 == ans.search2(a, t1) and ret2 == ans.search2(a, t2) \
-       and ret1 == ans.search1(a, t1) and ret2 == ans.search1(a, t2):
+       and ret1 == ans.search1(a, t1) and ret2 == ans.search1(a, t2) \
+       and ret1 == ans.search3(a, t1) and ret2 == ans.search3(a, t2):
         print("[Passed] - Search in Rotated Sorted Array")
     else:
         print("[Failed] - Search in Rotated Sorted Array")
-
