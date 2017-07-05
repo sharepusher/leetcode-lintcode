@@ -1,11 +1,14 @@
 ## Reference
 # http://www.lintcode.com/en/problem/find-minimum-in-rotated-sorted-array/#
+# 153 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/#/description
 
-## Tags - Medium
-# Binary Search
+## Tags - Medium; Red
+# Binary Search; Rotated Sorted Array
 
 ## Description
 # Suppose a sorted array is rotated at some pivot unknown to you beforehand
+# Find the minimum element(NOT THE index, but the element)
+# NOTE: assume not duplicate.
 
 ## Analysis
 #   input - Sorted, rotated array
@@ -24,13 +27,15 @@
 #         1) keep the original order num[-1] is always >=num[0]
 #         2) the first part is always greater than the second part
 
-
-
 ## Solution
 class Solution:
     # Brute force - O(N)
     # traverse - index traverse; value traverse? which one? do we need index?
     # no index needed, just need verify the value, so iterat value directly
+    def findMin4(self, num):
+        if not num:
+	    return None
+        return min(num)
     def findMin1(self, num):
         if not num:
             return None
@@ -43,7 +48,7 @@ class Solution:
         return min_num
     # 
     # binary search 
-    # find the first position that smaller than num[0]
+    # find the first position that smaller than start num[0]
     def findMin2(self, num):
         if not num:
             return None
@@ -51,7 +56,6 @@ class Solution:
         # original sorted array
         if num[0] <= num[-1]:
             return num[0]
-
         # the rotated array
         # as no duplicate, find the first position that smaller than the num[0]
         min_num = num[0]
@@ -91,11 +95,6 @@ class Solution:
         if num[start] < min_num:
             return num[start]
         return min_num            
-
-
-
-
-
        
 if __name__ == "__main__":
     num = [4, 5, 6, 7, 0, 1, 2]
@@ -104,4 +103,3 @@ if __name__ == "__main__":
         print("[Passed] - find minimum in rotated sorted array")
     else:
         print("[Failed] - find minimum in rotated sorted array")
-
