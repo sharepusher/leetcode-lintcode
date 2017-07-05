@@ -1,5 +1,9 @@
 ## Reference
 # http://www.lintcode.com/en/problem/sqrtx/
+# 69 https://leetcode.com/problems/sqrtx/#/description
+
+## Tags - Easy; Yellow
+# Binary Search; Mathematics; Facebook
 
 ## Description
 # Implement int sqrt(int x)
@@ -18,10 +22,15 @@
 #   2) init start_num from 2, end_num = x
 #   3) check whether the middle is the target, if so, start = middle, drop the left half
 #   4) if not, drop the right part, end = middle
+# r*r = x, then r is the squar root of x.
+# corner case: x should be positive
+# 1) broute-force: increase r one by one, until the first r*r that greater than x
+# and then we should return r-1,  but not r.
+# 2) Newton
+# 3) binary search: x is the largest r, so we can decrease to find the first r*r smaller than x.
 
 ## Solution
 class Solution:
-
     # according to the defination of square root
     def sqrt3(self, x):
         ans = 0
@@ -48,7 +57,6 @@ class Solution:
                 start = middle
         
         return start 
-
 
     # raw method based on the classical binary search
     # in fact, middle can be return directly if middle*middle == X,
@@ -79,7 +87,6 @@ if __name__ == "__main__":
     if ans.sqrt1(1) == 1 and ans.sqrt2(1) == 1 and ans.sqrt3(1) == 1 \
         and ans.sqrt1(2) == 1 and ans.sqrt2(2) == 1 and ans.sqrt3(2) == 1 \
         and ans.sqrt1(3) == 1 and ans.sqrt3(3) == 1 and ans.sqrt3(3) == 1:
-        print ("sqrt test passed")
+        print ("Passed: sqrt(x)")
     else:
-        print("sqrt test failed")
- 
+        print("Failed: sqrt(x)")
