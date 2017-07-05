@@ -81,6 +81,16 @@ class Solution:
         if start**2 <= x:
             return start
         return None
+    
+    # python lib
+    def sqrt4(self, x):
+        if x < 0:
+	    return None
+        if x == 0 or x== 1:
+	    return x
+        import math
+        # KEY: return int, but now float
+        return int(math.sqrt(x))
  
 if __name__ == "__main__":
     ans = Solution()
