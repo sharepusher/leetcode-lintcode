@@ -1,8 +1,9 @@
 ## Reference
 # http://www.lintcode.com/en/problem/powx-n/
+# 50 https://leetcode.com/problems/powx-n/#/description
 
-## Tags
-# Medium
+## Tags - Medium; Red
+# BinarySearch; Mathematics; Divide and conquer; Linkedin; Facebook
 
 ## Description
 # Implement pow(x, n)
@@ -16,24 +17,25 @@
 ## Analysis
 # Input - base number in double, power number int; Output - the result in double
 # special cases: n == 0, n == 1, n is negtive
+# How to handle n < 0 => x=1.0/x; n=-n
+# how to decrease the complexity => n//2, divide and conquer.
 # steps:
 #     1) handle specail cases 
 #     2) while loop to repeat the multiple calculation(brute force)
 #     3) or the recursion way to divide N
 #        a. divide calculate the x**(n/2), and then multiple the values
 
-
 ## Solution
 class Solution:
     # divide and conquer / binary search
-    def pow(x, n):
+    def myPow4(x, n):
         # base case
         if n == 0:
             return 1
         if n == 1:
             return x
         # divide
-        value = self.pow(x, n//2)
+        value = self.myPow4(x, n//2)
         # conquer
         if n % 2 == 0:
             return value * value
@@ -47,10 +49,9 @@ class Solution:
         if n == 1 or x == 0:
             return x
         if n < 0:
-            return 1 / self.pow(x, -n)
+            return 1 / self.myPow3(x, -n)
         else:
-            return pow(x, n) 
- 
+            return myPow3(x, n) 
 
     # brute force
     def myPow2(self, x, n):
