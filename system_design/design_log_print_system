@@ -1,0 +1,22 @@
+## Design a log print system that can support multi-terminal
+
+# Requirement
+1) core role: log, terminal
+关键点是利用动态绑定实现接口与实现的分离
+
+class BaseTerminal {
+public:
+ virtual void PrintLog(const string& message) const = 0;
+};
+
+class Screen: public BaseTerminal {
+public:
+ void PrintLog(const string& message) const = 0;
+};
+
+class Network: public BaseTerminal {
+public:
+ void PrintLog(const string& message) const = 0;
+};
+
+void LogPrint(const BaseTerminal &terminal);

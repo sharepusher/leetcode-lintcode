@@ -1,0 +1,13 @@
+# OOD
+1. class design
+2. interface design(OOD)
+3. function design(data structure)
+
+# Solution
+1. clarify requirment: communicate details.
+2. find the core roles of the system(class defination).
+3. find the operation on the core roles(function defination).
+4. find the relationship between the core roles.
+5. details on data structure and algorithm.
+
+

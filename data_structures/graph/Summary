@@ -1,0 +1,15 @@
+## Graph & Search
+# KEY: BFS and hashset
+# 1) Graph: Clone; Topological
+# 2) Search: DFS; BFS.
+
+## Difference between BFS in Binary Tree and Graph
+# Graph needs hashset.
+
+
+## deep copy problems
+#1) copy nodes; 2) copy edges
+
+
+
+
