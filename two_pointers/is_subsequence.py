@@ -23,8 +23,37 @@
 # if T has its subsequence.
 # In this senario, how would you change your code?
 
+## Solution
+class Solution(object):
+    # KEY: 1) substring of string is a new string formed from the original by deleting some(can be none) characters.
+    #      Therefore, "" is deleting all characters, so it's a substring of original
+    # 2) O(N*M) => O(M): for i and for j and check subsequence; 
+    #      Two pointers is a better one
+    def isSubsequence(self, s, t):
+        if not s:
+            return True
+        if not t:
+            # in this case, s is non-empty
+            return False
+        N, M = len(s), len(t)
+        if N > M:
+            return False
+        i, j = 0, 0
+        while i < N and j < M:
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+        if i < N:
+            return False
+        return True
 
+if __name__ == "__main__":
+    sol = Solution()
+    s1, t1 = "", "abc"
+    s2, t2 = "ab", "aecbace"
+    s3, t3 = "ae", "acbd"
 
-
-
+    print(sol.isSubsequence(s1,t1))
+    print(sol.isSubsequence(s2,t2))
+    print(sol.isSubsequence(s3,t3))
 
