@@ -1,7 +1,9 @@
 ## Reference
 # https://www.lintcode.com/problem/escape-the-ghosts/description
+# https://blog.csdn.net/cqbzlytina/article/details/75149587
+# https://baike.sogou.com/v7762743.htm?fromTitle=曼哈顿距离
 
-## Medium - Google/Mathematics
+## Medium - Google/Mathematics/Taxicab geometry/Manhattan length
 
 ## Description
 # You are playing a simplified Pacman game. 
@@ -36,6 +38,7 @@
 # 1) How to find the shorest distance? As you can only walk in four directions.
 # Therefore the shortest distance is Manhattan Distance. d = abs(t[x]-s[x])+abs(t[y]-s[y])
 # 2) When the Manhattan Distance can replace a DFS search: when only 4 direction allowed; and no details path required only look for the shortest distance.
+# |x1-x2| + |y1-y2|
 
 
 
