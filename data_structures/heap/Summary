@@ -1,0 +1,25 @@
+## Heap
+# What is heap?
+# 1) a complete binary tree.
+# 2) Two types:
+#    min heap - Each subtree, parent vlaue <= children value, and root is the min value of all
+#    max heap - Each subtree, parent value >= children value, and root is the max value of all 
+
+# How to store => array
+# suppose parent is k, 
+# then the left child is 2*k+1, the right child is 2*k+2
+
+
+# if left childrens are a heap, and right childrens are a heap. Move the root node shift down, then the entire tree will be a heap.
+
+# How to shift down:
+# compare with the two childs and switch with the smallest one.
+# N-1-1 =>  st=(N-2)/2 
+# last postion of array is N-1; st is the parent of last node.
+
+# a complet binary tree, all the leaf nodes around N/2, and then N/4, N/8 N/16
+# Time complexity => s = N/4+2N/8+3N/16.. => S= N/2+N/4+N/8 => S=O(N)
+
+
+
+
