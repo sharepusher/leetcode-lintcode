@@ -1,22 +1,14 @@
 ## Reference
 # 513 https://leetcode.com/problems/find-bottom-left-tree-value/#/description
 
-
-
-
 ## Tags - Medium
 # BinaryTree; DFS; BFS
-
-
-
 
 ## Description
 # Given a binary tree, find the leftmost value in the last row of the tree.
 
 # Example:
 # input 213, output1
-
-
 
 ## Analysis
 # DFS: while + stack
@@ -63,7 +55,7 @@ class Solution(Object):
         if llevel >= rlevel:
             return llevel, lval
         return rlevel, rval
-  
+
     # BFS: while + queue(deque)
     def findBottomLeftValue2(self, root):
         if not root:
@@ -84,17 +76,6 @@ class Solution(Object):
                         q.append(node)
             result = leftval
         return result
-                
-
-
-    
-    
-  
-    
-
-
-
-
 
 
 
