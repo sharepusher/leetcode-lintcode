@@ -57,7 +57,6 @@ def Solution:
         if not T1:
             return False
         return self.identical(T1, T2) or self.isSubtree2(T1.left, T2) or self.isSubtree(T1.right, T2)
-        
 
 
     # DFS: non-recursion(stack) + recursion
@@ -76,6 +75,7 @@ def Solution:
             T1 = stack.pop()
             if T1.val == T2.val and self.identical(T1, T2):
                 return True
+            # right first and then left
             if T1.right:
                 stack.append(T1.right)
             if T1.left:
@@ -91,5 +91,3 @@ def Solution:
             right =self.identical(a.right, b.right)
             return left and right
         return False
-            
-      
